@@ -50,7 +50,7 @@
             display: flex !important;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), url('images/login-bg.jpg');
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), url('gambar/login-bg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -254,7 +254,7 @@
         }
 
         .hero-banner {
-            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('images/main-banner.jpg');
+            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('gambar/main-banner.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -506,11 +506,11 @@
             gap: 10px;
             padding: 1rem 5%;
             overflow-x: auto;
-            scrollbar-width: none; /* Menyembunyikan scrollbar di Firefox */
+            scrollbar-width: none;
         }
 
         .tab-navigation::-webkit-scrollbar {
-            display: none; /* Menyembunyikan scrollbar di Chrome/Safari */
+            display: none;
         }
 
         .tab-btn {
@@ -521,7 +521,7 @@
             border-radius: 30px;
             cursor: pointer;
             font-weight: 600;
-            white-space: nowrap; /* Menjaga teks tombol agar tidak terlipat */
+            white-space: nowrap;
         }
 
         .tab-btn.active {
@@ -800,9 +800,6 @@
             display: none !important;
         }
 
-        /* ----------------------------------------- */
-        /* CSS ATURAN RESPONSIVITAS KHUSUS LAYAR HP   */
-        /* ----------------------------------------- */
         @media (max-width: 768px) {
             .app-header {
                 justify-content: center;
@@ -965,7 +962,7 @@
                         <hr class="divider">
                         <div id="game-box">
                             <div id="game-visual" class="game-visual-box">
-                                <img id="img-game-visual" src="images/game-cover.jpg" alt="Visual Soal">
+                                <img id="img-game-visual" src="gambar/game-cover.jpg" alt="Visual Soal">
                             </div>
                             <div id="question-text">Klik tombol di bawah untuk mulai mencocokkan!</div>
                             <div id="options-container"></div>
@@ -1035,7 +1032,7 @@
             </div>
             <div class="modal-body">
                 <div class="dev-team-banner">
-                    <img src="images/foto_tim_bersama.jpg" alt="THE LEGEND REBORN SMANSA MANADO" onerror="this.src='https://placehold.co/600x400/1e293b/f8fafc?text=THE+LEGEND+REBORN'">
+                    <img src="gambar/foto_tim_bersama.jpg" alt="THE LEGEND REBORN SMANSA MANADO" onerror="this.src='https://placehold.co/600x400/1e293b/f8fafc?text=THE+LEGEND+REBORN'">
                 </div>
                 <p>Aplikasi ini dirancang dan dikembangkan untuk mengikuti kompetisi digital :</p>
                 <br>
@@ -1046,17 +1043,17 @@
                 <p><strong>Struktur Anggota Tim:</strong></p>
                 <div class="dev-members-grid">
                     <div class="dev-member-card">
-                        <div class="dev-avatar"><img src="images/foto_pricillia.jpg" alt="Pricillia" onerror="this.src='https://placehold.co/150x150/1e293b/f8fafc?text=P'"></div>
+                        <div class="dev-avatar"><img src="gambar/foto_pricillia.jpg" alt="Pricillia" onerror="this.src='https://placehold.co/150x150/1e293b/f8fafc?text=P'"></div>
                         <h5>Pricillia Pontoh</h5>
                         <span>Ketua Tim</span>
                     </div>
                     <div class="dev-member-card">
-                        <div class="dev-avatar"><img src="images/foto_zefanya.jpg" alt="Zefanya" onerror="this.src='https://placehold.co/150x150/1e293b/f8fafc?text=Z'"></div>
+                        <div class="dev-avatar"><img src="gambar/foto_zefanya.jpg" alt="Zefanya" onerror="this.src='https://placehold.co/150x150/1e293b/f8fafc?text=Z'"></div>
                         <h5>Zefanya Sumarandak</h5>
                         <span>Anggota 1</span>
                     </div>
                     <div class="dev-member-card">
-                        <div class="dev-avatar"><img src="images/foto_belicia.jpg" alt="Belicia" onerror="this.src='https://placehold.co/150x150/1e293b/f8fafc?text=B'"></div>
+                        <div class="dev-avatar"><img src="gambar/foto_belicia.jpg" alt="Belicia" onerror="this.src='https://placehold.co/150x150/1e293b/f8fafc?text=B'"></div>
                         <h5>Belicia Wawointana</h5>
                         <span>Anggota 2</span>
                     </div>
@@ -1156,13 +1153,13 @@
                 q: "Mana yang merupakan kawasan konservasi terumbu karang dunia?",
                 a: ["Taman Nasional Bunaken", "Danau Linow"],
                 c: 0,
-                image: "images/game-cover.jpg"
+                image: "gambar/game-cover.jpg"
             },
             {
                 q: "Danau di Tomohon yang warnanya bisa berubah-ubah adalah...",
                 a: ["Danau Linow", "Taman Nasional Bunaken"],
                 c: 0,
-                image: "images/game-cover.jpg"
+                image: "gambar/game-cover.jpg"
             }
         ];
 
@@ -1186,7 +1183,6 @@
         const wisataGrid = document.getElementById('wisata-grid');
         const kulinerGrid = document.getElementById('kuliner-grid');
 
-        // FORM LOGIN EVENT
         document.getElementById('login-form').addEventListener('submit', function(e) {
             e.preventDefault();
             currentUser = document.getElementById('username').value;
@@ -1223,7 +1219,7 @@
                 card.className = 'card';
                 card.innerHTML = `
                     <div class="card-img-container">
-                        <img src="images/${item.id}.jpg" alt="${item.n}" onerror="this.src='https://placehold.co/600x400/1e293b/f8fafc?text=${item.id}'">
+                        <img src="gambar/${item.id}.jpg" alt="${item.n}" onerror="this.src='https://placehold.co/600x400/1e293b/f8fafc?text=${item.id}'">
                     </div>
                     <div class="card-body">
                         <span class="card-tag">${item.k}</span>
@@ -1248,7 +1244,7 @@
             document.getElementById('detail-description').innerText = item.d;
             
             const imgEl = document.getElementById('detail-image');
-            imgEl.src = `images/${item.id}.jpg`;
+            imgEl.src = `gambar/${item.id}.jpg`;
             imgEl.onerror = function() {
                 this.src = `https://placehold.co/600x400/1e293b/f8fafc?text=${item.n}`;
             };
@@ -1256,7 +1252,6 @@
             openModal('modal-detail-focus');
         }
 
-        // TAB NAVIGATION
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 playClickSound();
@@ -1274,22 +1269,22 @@
                 if (target === 'beranda') {
                     heroTitle.innerText = "Selamat Datang di KAWANUA360!";
                     heroSubtitle.innerText = "Jelajahi keindahan bumi Nyiur Melambai dalam satu genggaman digital.";
-                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('images/main-banner.jpg')";
+                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('gambar/main-banner.jpg')";
                 } 
                 else if (target === 'wisata') {
                     heroTitle.innerText = "Mari Jo Pasiar!";
                     heroSubtitle.innerText = "Temukan pesona alam, sejarah, dan surga tersembunyi di Sulawesi Utara.";
-                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('images/main-banner-wisata.jpg')";
+                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('gambar/main-banner-wisata.jpg')";
                 } 
                 else if (target === 'kuliner') {
                     heroTitle.innerText = "Kuliner Kawanua";
                     heroSubtitle.innerText = "Manjakan lidah Anda dengan cita rasa otentik, pedas, dan legendaris khas Sulut.";
-                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('images/main-banner-kuliner.jpg')";
+                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('gambar/main-banner-kuliner.jpg')";
                 } 
                 else if (target === 'games') {
                     heroTitle.innerText = "Games";
                     heroSubtitle.innerText = "Uji wawasan kebudayaan dan ketangkasan bahasamu lewat tantangan interaktif.";
-                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('images/game-banner.jpg')";
+                    heroBanner.style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('gambar/game-banner.jpg')";
                 }
             });
         });
@@ -1312,7 +1307,7 @@
 
             document.getElementById('hero-title').innerText = "Selamat Datang di KAWANUA360!";
             document.getElementById('hero-subtitle').innerText = "Jelajahi keindahan bumi Nyiur Melambai dalam satu genggaman digital.";
-            document.getElementById('hero-banner-bg').style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('images/main-banner.jpg')";
+            document.getElementById('hero-banner-bg').style.backgroundImage = "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('gambar/main-banner.jpg')";
 
             if (category === 'wisata') renderGrid(filteredWisata, featuredGrid);
             else if (category === 'kuliner') renderGrid(filteredKuliner, featuredGrid);
@@ -1350,7 +1345,7 @@
 
         function resetToGameHome(gameNum) {
             if(gameNum === 1) {
-                document.getElementById('img-game-visual').src = "images/game-cover.jpg";
+                document.getElementById('img-game-visual').src = "gambar/game-cover.jpg";
                 document.getElementById('question-text').innerText = "Klik tombol di bawah untuk mulai mencocokkan!";
                 document.getElementById('options-container').innerHTML = '';
                 document.getElementById('quiz-nav').classList.add('hidden');
